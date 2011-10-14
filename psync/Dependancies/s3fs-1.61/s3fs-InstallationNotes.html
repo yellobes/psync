@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html><head>
+ <link rel="icon" type="image/vnd.microsoft.icon" href="http://www.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <link rel="canonical" href="http://code.google.com/p/s3fs/wiki/InstallationNotes">
+ 
+ <script src="s3fs-InstallationNotes_files/googleapis.js"></script><script type="text/javascript">
+ 
+ 
+ 
+ 
+ var codesite_token = "491279db0a0b88e2c9ff8a5ee1694f87";
+ 
+ 
+ var CS_env = {"profileUrl":["/u/@UBVXQ1VQBRdAWAF0/"],"token":"491279db0a0b88e2c9ff8a5ee1694f87","assetHostPath":"http://www.gstatic.com/codesite/ph","domainName":null,"assetVersionPath":"http://www.gstatic.com/codesite/ph/13841197563397998716","projectHomeUrl":"/p/s3fs","relativeBaseUrl":"","projectName":"s3fs","loggedInUserEmail":"peter@binarysprocket.com"};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ 
+ </script>
+ 
+ 
+ <title>InstallationNotes - 
+ s3fs -
+ 
+ Installation Notes - 
+ FUSE-based file system backed by Amazon S3 - Google Project Hosting
+ </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link type="text/css" rel="stylesheet" href="s3fs-InstallationNotes_files/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="s3fs-InstallationNotes_files/ph_detail.css">
+ 
+ 
+ 
+ <link type="application/atom+xml" rel="alternate" href="http://code.google.com/feeds/p/s3fs/svnchanges/basic?path=/wiki/InstallationNotes.wiki">
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="http://www.gstatic.com/codesite/ph/13841197563397998716/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(http://www.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ #maincol {
+ padding-top: 0;
+ padding-bottom: 0;
+ }
+
+ 
+ </style>
+<script src="s3fs-InstallationNotes_files/ga.js" async="" type="text/javascript"></script></head>
+<body class="t6">
+<script type="text/javascript">
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <b>peter@binarysprocket.com</b>
+ 
+ 
+ | <a href="http://code.google.com/u/@UBVXQ1VQBRdAWAF0/" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>▼</small></a>
+ | <a href="http://code.google.com/u/@UBVXQ1VQBRdAWAF0/" onclick="_CS_click('/gb/ph/profile');" title="Profile, Updates, and Settings"><u>Profile</u></a>
+ | <a href="https://www.google.com/accounts/Logout?continue=http%3A%2F%2Fcode.google.com%2Fp%2Fs3fs%2Fwiki%2FInstallationNotes" onclick="_CS_click('/gb/ph/signout');"><u>Sign out</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+
+ <table style="padding: 0px; margin: 0px 0px 10px; width: 100%;" itemscope="" itemtype="http://schema.org/CreativeWork" cellpadding="0" cellspacing="0">
+ <tbody><tr style="height: 58px;">
+ 
+ <td id="plogo">
+ <link itemprop="url" href="http://code.google.com/p/s3fs">
+ <a href="http://code.google.com/p/s3fs/">
+ 
+ 
+ <img src="s3fs-InstallationNotes_files/logo.png" alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em;">
+ 
+ <div id="pname">
+ <a href="http://code.google.com/p/s3fs/"><span itemprop="name">s3fs</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link" href="http://code.google.com/p/s3fs/"><span itemprop="description">FUSE-based file system backed by Amazon S3</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space: nowrap; text-align: right; vertical-align: bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" type="text">
+ 
+ <input name="projectsearch" value="Search projects" type="submit">
+ </form>
+ 
+ </td></tr>
+ </tbody></table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="http://code.google.com/p/s3fs/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/s3fs/downloads/list" class="tab ">Downloads</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/s3fs/w/list" class="tab active">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/s3fs/issues/list" class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="http://code.google.com/p/s3fs/source/checkout" class="tab ">Source</a>
+ 
+ 
+ 
+ 
+ 
+ <div class="gtbc"></div>
+</div>
+<table class="st" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+ <tbody><tr>
+ 
+ 
+ 
+ <td class="subt">
+ <div class="issueDetail">
+<div class="isf">
+ 
+ <span class="inIssueList"> 
+ <span>Search</span>
+ <form action="/p/s3fs/w/list" method="GET" style="display:inline">
+ <select id="can" name="can">
+ <option disabled="disabled">Search within:</option>
+ 
+ <option value="1">&nbsp;All wiki pages</option>
+ <option value="3">&nbsp;Featured pages</option>
+ <option value="2" selected="selected">&nbsp;Current pages</option>
+ 
+ 
+ <option value="5">&nbsp;My starred pages</option>
+ 
+ <option value="4">&nbsp;Deprecated pages</option>
+ 
+ </select>
+ <span>for</span>
+ <span id="qq"><input size="38" id="searchq" name="q" autocomplete="off" type="text"></span>
+ 
+ 
+ 
+ <input value="Search" type="submit">
+ </form>
+ </span>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+</div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td class="bevel-right" align="right" valign="top"></td>
+ </tr>
+</tbody></table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol">
+
+ 
+<!-- IE -->
+
+
+
+
+
+
+
+ <style type="text/css">
+ .delcom { background: #e8e8e8 }
+ .commentcontent {
+ margin: 2em;
+ padding: 0px 10px;
+ width: 66em;
+ }
+ .artifactcomment {
+ border-top: 3px solid #c3d9ff;
+ }
+ #commentform {
+ border-top: 3px solid #c3d9ff;
+ }
+ </style>
+
+<div id="wikipage">
+<table>
+ <tbody><tr>
+ 
+ 
+ <td style="vertical-align: top; padding-left: 5px;">
+ 
+ <div id="wikiheader">
+ 
+ <img id="star_img" src="s3fs-InstallationNotes_files/star_off.gif" style="cursor: pointer;" onclick="_CS_toggleStar(this,
+ '',
+ {'scope': 'wiki',
+ 'user': '_CURRENT_USER',
+ 'item': 's3fs:InstallationNotes',
+ 'token': codesite_token
+ });" height="15" width="15">
+ 
+ <span style="font-size:120%;font-weight:bold">InstallationNotes</span>
+ &nbsp;
+ <div> 
+ 
+ <i>Installation Notes</i>
+ 
+ 
+ <br>
+ 
+ <a class="label" style="padding-top: 2px;" href="http://code.google.com/p/s3fs/w/list?q=label:Featured" title="Listed on project home page">Featured</a>
+ 
+ 
+ 
+ <div id="wikiauthor" style="float:right">
+ Updated <span title="Tue Aug 30 08:23:45 2011">
+ Aug 30, 2011</span>
+ 
+ by <a style="white-space: nowrap;" href="http://code.google.com/u/@VxFSR1xSDhJFXAh4/">ben.lema...@gmail.com</a>
+ 
+ </div>
+ </div>
+ </div>
+ 
+ <div id="wikicontent">
+ <div class="vt" id="wikimaincol">
+ <h1><a name="General_Instructions"></a>General Instructions<a href="#General_Instructions" class="section_anchor"></a></h1><h2><a name="From_released_tarball"></a>From released tarball<a href="#From_released_tarball" class="section_anchor"></a></h2><p>Download: <a href="http://s3fs.googlecode.com/files/s3fs-1.61.tar.gz" rel="nofollow">http://s3fs.googlecode.com/files/s3fs-1.61.tar.gz</a> <br> Download SHA1 checksum: 8f6561ce00b41c667b738595fdb7b42196c5eee6 <br> Download size: 154904 <br> </p><ul><li>tar xvzf s3fs-1.61.tar.gz </li><li>cd s3fs-1.61/ </li><li>./configure --prefix=/usr </li><li>make </li><li>make install (as root) </li></ul><h2><a name="From_subversion_repository"></a>From subversion repository<a href="#From_subversion_repository" class="section_anchor"></a></h2><ul><li>svn checkout <a href="http://s3fs.googlecode.com/svn/trunk/" rel="nofollow">http://s3fs.googlecode.com/svn/trunk/</a> s3fs </li><li>cd s3fs/ </li><li>autoreconf --install (or ./autogen.sh) </li><li>./configure --prefix=/usr </li><li>make </li><li>make install (as root) </li></ul><h1><a name="Notes_for_Specific_Operating_Systems"></a>Notes for Specific Operating Systems<a href="#Notes_for_Specific_Operating_Systems" class="section_anchor"></a></h1><h2><a name="Debian_/_Ubuntu"></a>Debian / Ubuntu<a href="#Debian_/_Ubuntu" class="section_anchor"></a></h2><p>Tested on Ubuntu 10.10 </p><p>Install prerequisites before compiling: </p><ul><li>apt-get install build-essential </li><li>apt-get install libfuse-dev </li><li>apt-get install fuse-utils </li><li>apt-get install libcurl4-openssl-dev </li><li>apt-get install libxml2-dev </li><li>apt-get install mime-support  </li></ul><p></p><h2><a name="Fedora_/_CentOS"></a>Fedora / CentOS<a href="#Fedora_/_CentOS" class="section_anchor"></a></h2><p>Tested on Fedora 14 Desktop Edition and CentOS 5.5 (<strong>Note:</strong> on Nov 25, 2010 with s3fs version 1.16, newer versions of s3fs have not been formally tested on these platforms) </p><p><strong>Note:</strong> See the comment below on how to get FUSE 2.8.4 installed on CentOS 5.5 </p><p>Install prerequisites before compiling: </p><ul><li>yum install gcc </li><li>yum install libstdc++-devel </li><li>yum install gcc-c++ </li><li>yum install fuse </li><li>yum install fuse-devel </li><li>yum install curl-devel </li><li>yum install libxml2-devel </li><li>yum install openssl-devel </li><li>yum install mailcap </li></ul><p></p>
+ </div>
+ </div>
+ </td></tr><tr>
+</tr></tbody></table>
+ </div>
+
+
+ 
+ <div id="wikicommentcol">
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+
+<div class="collapse">
+
+
+ 
+
+
+<div id="commentlist">
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by  project member 
+ 
+ <a style="white-space: nowrap;" href="http://code.google.com/u/@UBhQRFdWABVCXQU%3D/">moore...@suncup.net</a>,
+ 
+ </span>
+ <span class="date" title="Wed Jan 12 21:04:56 2011">Jan 12, 2011</span>
+ <div>
+<div class="commentcontent">
+<p>For Debian Lenny, see <a title="Fuse 2.8.4 on Debian Lenny istance" class="closed_ref" href="http://code.google.com/p/s3fs/issues/detail?id=143">&nbsp;issue #143&nbsp;</a> on instructions on how to get FUSE 2.8.4 installed </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+ 
+ <div class="artifactcomment">
+ 
+ 
+ 
+ 
+ 
+ 
+ <span class="author">Comment
+ 
+ by  project member 
+ 
+ <a style="white-space: nowrap;" href="http://code.google.com/u/@UBhQRFdWABVCXQU%3D/">moore...@suncup.net</a>,
+ 
+ </span>
+ <span class="date" title="Wed Mar  9 15:06:15 2011">Mar 9, 2011</span>
+ <div>
+<div class="commentcontent">
+<p>For CentOS, see <a title="s3fs &gt;= 1.25 won't install on CentOS 5.5" class="closed_ref" href="http://code.google.com/p/s3fs/issues/detail?id=170">&nbsp;issue #170&nbsp;</a> on instructions on how to get FUSE 2.8.4 installed </p>
+</div>
+ 
+ 
+ </div>
+ </div>
+ 
+
+</div>
+</div>
+
+ 
+
+
+ <script type="text/javascript">
+ function delComment(sequence_num, create_time, delete_mode) {
+ var f = document.forms["delcom"];
+ f.sequence_num.value = sequence_num;
+ f.create_time.value = create_time;
+ f.mode.value = delete_mode;
+ f.submit();
+ return false;
+ }
+ </script>
+
+
+ </div>
+ 
+ 
+ 
+ <form name="delcom" action="../w/delComment.do" method="POST">
+ <input name="sequence_num" value="" type="hidden">
+ <input name="create_time" value="" type="hidden">
+ <input name="mode" value="" type="hidden">
+ <input name="pagename" value="InstallationNotes" type="hidden">
+ <input name="token" value="491279db0a0b88e2c9ff8a5ee1694f87" type="hidden">
+ </form>
+
+
+
+ <script src="s3fs-InstallationNotes_files/prettify.js"></script>
+ <script type="text/javascript">
+ prettyPrint();
+ </script>
+
+<script type="text/javascript" src="s3fs-InstallationNotes_files/dit_scripts.js"></script>
+
+
+<script type="text/javascript" src="s3fs-InstallationNotes_files/plusone.js">
+</script>
+
+  
+ 
+ 
+ <script type="text/javascript" src="s3fs-InstallationNotes_files/ph_core.js"></script>
+ 
+ 
+ 
+ 
+ <script type="text/javascript" src="s3fs-InstallationNotes_files/codesite_product_dictionary_ph.js"></script>
+</div> 
+<div id="footer" dir="ltr">
+ <div class="text">
+ ©2011 Google -
+ <a href="http://code.google.com/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="http://code.google.com/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+ 
+ 
+
+
+ 
+ 
+
+
+
+<div style="display: none;" id="menuDiv-projects-dropdown" class="menuDiv instance0"><div class="menuCategory controls"><hr class="menuSeparator"><a href="http://code.google.com/more/" style="display: block;" class="menuItem">Find developer products...</a><a href="http://code.google.com/hosting/" style="display: block;" class="menuItem">Find open source projects...</a></div></div></body></html>
