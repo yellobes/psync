@@ -5,7 +5,7 @@ echo $(date);
 	# Base location
 	bseloc=~/sync;
 	# Temp location
-	tmploc=$baseloc/tmp;
+	tmploc=$baseloc/tmp/;
 	# wp-content location
         content="/opt/lampp/htdocs/dev/wp-content";
 	# wp-bucket
